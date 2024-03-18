@@ -2,7 +2,10 @@
 #编译器需要的包
 program_packages=['gcc','g++','cmake','ccache','python3-pip','python3-venv']
 #终端环境需要的包
-console_packages=['fish','vim','neofetch','git','btop']
+console_packages=['fish','vim','neofetch','git','btop','nala']
+#qt环境需要的包
+qt_packages=['qt5-default', 'qt5-qmake', 'qtcreator']
+
 
 
 import subprocess
@@ -42,6 +45,7 @@ import apt
 def check()->set:
     all_packages=program_packages
     all_packages.extend(console_packages)
+    all_packages.extend(qt_packages)
     #查询系统已安装的包
     cache=apt.Cache()
     #定义已安装，未安装，不存在的set
