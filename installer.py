@@ -2,7 +2,7 @@
 #编译器需要的包
 program_packages=['gcc','g++','cmake','ccache','python3-pip','python3-venv']
 #终端环境需要的包
-console_packages=['fish','vim','neofetch','git','btop','nala']
+console_packages=['fish','vim','neofetch','git','btop','nala','stow', 'curl', 'wget']
 #qt环境需要的包
 qt_packages=['qt5-default', 'qt5-qmake', 'qtcreator']
 
