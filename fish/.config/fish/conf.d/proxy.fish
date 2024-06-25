@@ -1,10 +1,12 @@
 function proxyon
-	set -gx http_proxy http://localhost:7890
-	set -gx https_proxy http://localhost:7890
+	set -gx HTTPS_PROXY http://localhost:7890
+	set -gx HTTP_PROXY http://localhost:7890
+	set -gx NO_PROXY localhost,127.0.0.1,.example.com
 end
 
 function proxyoff
-	set -e http_proxy
-	set -e https_proxy
+	set -e HTTPS_PROXY
+	set -e HTTP_PROXY
+	set -e NO_PROXY
 end
 	
